@@ -1,2 +1,2 @@
-# SEVENTWOS-ORG
+# SEVENTWOS
 Our Website
