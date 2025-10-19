@@ -1,0 +1,205 @@
+/* Base layout and resets for the page (HTML5, not email) */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff; /* Set the background color to white */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* removed global table { border-collapse: collapse; } to preserve per-table behavior */
+
+hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: none;
+  margin: 0;
+  background: #bfc3c8;
+}
+
+/* Default: hide the small layout */
+.layout-0-under-450 {
+  display: none;
+}
+
+/* Responsive: show the small layout under 450px and hide the large one */
+@media (max-width: 450px) {
+  .layout-0 {
+    display: none !important;
+  }
+  .layout-0-under-450 {
+    display: table !important;
+  }
+}
+
+/* Utilities */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.pt10 { padding-top: 10px; }
+.py10 { padding: 10px 0; }
+.py20 { padding: 20px 0; }
+.px20 { padding: 0 20px; }
+
+.prewrap { white-space: pre-wrap; }
+
+/* spacer uses numeric zero and plain numbers where allowed */
+.spacer-16 { height: 16px; font-size: 0; line-height: 0; }
+.spacer-24 { height: 24px; font-size: 0; line-height: 0; } /* additional spacer for larger gaps */
+
+/* Text block defaults */
+.text-table {
+  color: #000;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-align: left;
+  direction: ltr;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  border-collapse: collapse; /* match original inline style */
+}
+
+/* Headline styling */
+.headline {
+  color: #0e1b10;
+  font-size: 19px; /* use integer px to avoid fractional rendering differences */
+  line-height: 0.8;
+  text-align: center;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block; /* intrinsic width so table centering works */
+  width: auto;
+  min-width: 120px;
+  height: 50px;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0; /* label will control inner padding */
+  background: transparent; /* label will have background */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.btn__label {
+  display: inline-block;
+  background-color: #ce2d4f;
+  color: #ffffff;
+  font-size: 19px; /* round to whole px */
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  direction: ltr;
+  text-align: center;
+  line-height: 50px; /* vertically center the label */
+  letter-spacing: 0;
+  padding: 0 22px; /* horizontal padding for button shape */
+  border-radius: 100px;
+  box-sizing: border-box;
+}
+
+/* Text helpers */
+.bold { font-weight: 700; }
+.ls-004neg { letter-spacing: -0.04em; }
+.ls-003neg { letter-spacing: -0.03em; }
+.ls-001neg { letter-spacing: -0.01em; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.bg-black { background-color: transparent !important; color: inherit !important; }
+
+/* Footer-specific text blocks */
+.footer-headline {
+  color: #f6f5f1;
+  font-size: 24px; /* integer px for consistency */
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  white-space: pre-wrap;
+  line-height: 1.2;
+  text-align: left;
+}
+.footer-muted {
+  color: #bfc3c8;
+  font-size: 13px; /* integer px */
+  letter-spacing: -0.01em;
+  white-space: pre-wrap;
+  line-height: 1.15;
+  text-align: left;
+}
+.footer-legal {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.15;
+  text-align: left;
+}
+
+/* Layout helpers */
+.bg-light { background-color: #f0f1f5 !important; }
+.bg-dark { background-color: #070300; }
+
+/* Ensure .bg-black stays black only in the footer context so the copyright span matches prev_index.html */
+.bg-dark .bg-black { background-color: #000000 !important; color: #ffffff !important; }
+
+.p7 { padding: 7px; }
+.p0 { padding: 0; }
+.py31p13 { padding-top: 31.130414418485458px; padding-bottom: 31.130414418485458px; } /* match original fractional padding for pixel-exact parity with prev_index.html */
+
+/* Max-width helpers */
+.maxw-164 { max-width: 164px; }
+.maxw-420 { max-width: 420px; }
+.maxw-484 { max-width: 484px; }
+.maxw-522 { max-width: 522px; }
+.maxw-560 { max-width: 560px; }
+/* Match main container width */
+.maxw-600 { max-width: 600px; }
+
+/* Make max-width helper tables center reliably across browsers (tables -> block for margin:auto to work) */
+table.maxw-164,
+table.maxw-420,
+table.maxw-484,
+table.maxw-522,
+table.maxw-560,
+table.maxw-600 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure parent containers support centering */
+table.maxw-164 {
+  display: block; /* Allow margin auto to work */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Ensure content aligns center */
+}
+
+td {
+  text-align: center; /* Center content within table cells */
+}
+
+.img-center { text-align: center; }
+/* Ensure hero images center and keep responsive behavior */
+img.full-width {
+  display: block;
+  margin: 0 auto; /* center within container */
+  width: 100%;
+  max-width: 484px; /* match source image intrinsic width */
+  height: auto;
+}
