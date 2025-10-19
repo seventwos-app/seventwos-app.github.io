@@ -55,10 +55,7 @@ hr {
 .py20 { padding: 20px 0; }
 .px20 { padding: 0 20px; }
 
-.prewrap { white-space: pre-wrap; }
-
 /* spacer uses numeric zero and plain numbers where allowed */
-.spacer-16 { height: 16px; font-size: 0; line-height: 0; }
 .spacer-24 { height: 24px; font-size: 0; line-height: 0; } /* additional spacer for larger gaps */
 
 /* Text block defaults */
@@ -76,14 +73,6 @@ hr {
   word-wrap: break-word;
   word-break: break-word;
   border-collapse: collapse; /* match original inline style */
-}
-
-/* Headline styling */
-.headline {
-  color: #0e1b10;
-  font-size: 19px; /* use integer px to avoid fractional rendering differences */
-  line-height: 0.8;
-  text-align: center;
 }
 
 /* Button styling */
@@ -120,8 +109,6 @@ hr {
 .bold { font-weight: 700; }
 .ls-004neg { letter-spacing: -0.04em; }
 .ls-003neg { letter-spacing: -0.03em; }
-.ls-001neg { letter-spacing: -0.01em; }
-.text-left { text-align: left; }
 .text-center { text-align: center; }
 .bg-black { background-color: transparent !important; color: inherit !important; }
 
@@ -151,7 +138,7 @@ hr {
 }
 
 /* Layout helpers */
-.bg-light { background-color: #f0f1f5 !important; }
+.bg-light { background-color: #ffffff !important; }
 .bg-dark { background-color: #070300; }
 
 /* Ensure .bg-black stays black only in the footer context so the copyright span matches prev_index.html */
@@ -162,7 +149,6 @@ hr {
 .py31p13 { padding-top: 31.130414418485458px; padding-bottom: 31.130414418485458px; } /* match original fractional padding for pixel-exact parity with prev_index.html */
 
 /* Max-width helpers */
-.maxw-164 { max-width: 164px; }
 .maxw-420 { max-width: 420px; }
 .maxw-484 { max-width: 484px; }
 .maxw-522 { max-width: 522px; }
@@ -171,7 +157,6 @@ hr {
 .maxw-600 { max-width: 600px; }
 
 /* Make max-width helper tables center reliably across browsers (tables -> block for margin:auto to work) */
-table.maxw-164,
 table.maxw-420,
 table.maxw-484,
 table.maxw-522,
@@ -194,7 +179,6 @@ td {
   text-align: center; /* Center content within table cells */
 }
 
-.img-center { text-align: center; }
 /* Ensure hero images center and keep responsive behavior */
 img.full-width {
   display: block;
