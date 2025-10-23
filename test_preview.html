@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hero Container Preview Test</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .test-section {
+            margin: 40px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .viewport-demo {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hero Container Implementation Preview</h1>
+    <p>This page demonstrates the new black background container with overlay capabilities at different viewport sizes.</p>
+
+    <div class="test-section">
+        <h2>Desktop View (Full Size - 484x363px)</h2>
+        <div class="viewport-demo" style="width: 484px; margin: 0 auto;">
+            <div class="hero-container">
+                <!-- Sample overlay demonstration -->
+                <div class="hero-overlay">
+                    <div class="hero-overlay-image">
+                        <img src="images/logo.png" alt="Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="hero-overlay-text">
+                        Desktop View<br>Sample Overlay
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><strong>Features demonstrated:</strong> 20px border-radius, black background, centered overlay with logo and text</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Mobile View (Simulated - 320px width)</h2>
+        <div class="viewport-demo" style="max-width: 320px; margin: 0 auto;">
+            <div class="hero-container" style="width: calc(100% - 40px); height: calc((100vw - 40px) * 0.75); max-width: 280px; height: 210px;">
+                <div class="hero-overlay">
+                    <div class="hero-overlay-image" style="width: 50px; height: 50px; margin-bottom: 12px;">
+                        <img src="images/logo.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">
+                    </div>
+                    <div class="hero-overlay-text" style="font-size: 18px;">
+                        Mobile View<br>Responsive
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><strong>Features demonstrated:</strong> Responsive sizing, smaller overlay elements, maintained aspect ratio</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Overlay Stacking Demonstration</h2>
+        <div class="viewport-demo" style="width: 484px; margin: 0 auto;">
+            <div class="hero-container">
+                <!-- Multiple overlay layers to demonstrate z-index -->
+                <div class="hero-overlay">
+                    <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.2); padding: 10px; border-radius: 5px; color: white; font-size: 12px; z-index: 4;">
+                        Background Layer (z-index: 1)
+                    </div>
+                    <div class="hero-overlay-image">
+                        <img src="images/logo.png" alt="Logo" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="hero-overlay-text">
+                        Overlay Content<br>(z-index: 2-3)
+                    </div>
+                    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(206,45,79,0.8); padding: 8px; border-radius: 15px; color: white; font-size: 12px; z-index: 4;">
+                        Top Layer (z-index: 4)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p><strong>Features demonstrated:</strong> Proper z-index layering, overflow: hidden clipping, positioned overlay elements</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Implementation Details</h2>
+        <ul>
+            <li><strong>Container Dimensions:</strong> 484px × 363px (matches original image)</li>
+            <li><strong>Background:</strong> #000000 (solid black)</li>
+            <li><strong>Border Radius:</strong> 20px for curved edges</li>
+            <li><strong>Position:</strong> Relative with z-index: 1</li>
+            <li><strong>Overflow:</strong> Hidden for clean edge clipping</li>
+            <li><strong>Responsive:</strong> Scales proportionally on mobile devices</li>
+            <li><strong>Overlay Support:</strong> Absolute positioning with higher z-index values</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>CSS Classes Available</h2>
+        <ul>
+            <li><code>.hero-container</code> - Main black background container</li>
+            <li><code>.hero-overlay</code> - Centered flex overlay wrapper</li>
+            <li><code>.hero-overlay-image</code> - Circular image container</li>
+            <li><code>.hero-overlay-text</code> - Styled text overlay</li>
+        </ul>
+    </div>
+</body>
+</html>

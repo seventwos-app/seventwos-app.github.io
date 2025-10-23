@@ -179,7 +179,97 @@ td {
   text-align: center; /* Center content within table cells */
 }
 
-/* Ensure hero images center and keep responsive behavior */
+/* Hero Container - replaces the original image with styled background */
+.hero-container {
+  display: block;
+  margin: 0 auto; /* center within container */
+  width: 100%;
+  max-width: 484px; /* match source image intrinsic width */
+  height: 363px; /* match source image intrinsic height */
+  background-color: #000000;
+  border-radius: 20px; /* curved edges */
+  position: relative;
+  z-index: 1; /* support overlay stacking */
+  overflow: hidden; /* clean edge clipping */
+  box-sizing: border-box;
+}
+
+/* Overlay elements for demonstration */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+  z-index: 2; /* above container background */
+}
+
+.hero-overlay-image {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 54px;
+  z-index: 3;
+}
+
+.hero-overlay-text {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  z-index: 3;
+  line-height: 1.3;
+  max-width: 400px;
+}
+
+/* Responsive behavior for hero container */
+@media (max-width: 484px) {
+  .hero-container {
+    width: calc(100% - 40px); /* account for 20px padding on each side */
+    height: calc((100vw - 40px) * 0.75); /* maintain aspect ratio (363/484 ≈ 0.75) */
+  }
+  
+  .hero-overlay {
+    padding-top: 45px;
+  }
+  
+  .hero-overlay-image {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-overlay-text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-overlay {
+    padding-top: 30px;
+  }
+  
+  .hero-overlay-image {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 27px;
+  }
+  
+  .hero-overlay-text {
+    font-size: 21px;
+  }
+}
+
+/* Legacy: Ensure hero images center and keep responsive behavior (kept for any remaining img elements) */
 img.full-width {
   display: block;
   margin: 0 auto; /* center within container */
