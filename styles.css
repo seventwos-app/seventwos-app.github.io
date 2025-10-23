@@ -210,8 +210,8 @@ td {
 }
 
 .hero-overlay-image {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -222,7 +222,7 @@ td {
 
 .hero-overlay-text {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 29px;
   font-weight: bold;
   text-align: center;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
@@ -243,13 +243,13 @@ td {
   }
   
   .hero-overlay-image {
-    width: 35px;
-    height: 35px;
+    width: 52px;
+    height: 52px;
     margin-bottom: 25px;
   }
   
   .hero-overlay-text {
-    font-size: 18px;
+    font-size: 26px;
   }
 }
 
@@ -259,13 +259,13 @@ td {
   }
   
   .hero-overlay-image {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     margin-bottom: 20px;
   }
   
   .hero-overlay-text {
-    font-size: 16px;
+    font-size: 23px;
   }
 }
 
