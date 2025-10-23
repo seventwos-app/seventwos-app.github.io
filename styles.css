@@ -216,7 +216,7 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 54px;
   z-index: 3;
 }
 
@@ -224,7 +224,7 @@ td {
   color: #ffffff;
   font-size: 30px;
   font-weight: bold;
-  text-align: justify;
+  text-align: center;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   z-index: 3;
   line-height: 1.3;
@@ -245,7 +245,7 @@ td {
   .hero-overlay-image {
     width: 78px;
     height: 78px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
   }
   
   .hero-overlay-text {
@@ -261,7 +261,7 @@ td {
   .hero-overlay-image {
     width: 68px;
     height: 68px;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
   
   .hero-overlay-text {
