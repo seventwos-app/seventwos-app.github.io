@@ -178,7 +178,7 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 60px; /* This creates the gap between image and text */
+  margin-bottom: clamp(20px, 5vw, 60px); /* Responsive gap between image and text */
   z-index: 3;
 }
 
