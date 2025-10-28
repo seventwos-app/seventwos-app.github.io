@@ -218,7 +218,7 @@ td {
     line-height: 1.2;
     text-align: left;
     max-width: 640px;
-    width: 100%;
+    width: 90%;
 }
 
 .footer-muted {
@@ -229,7 +229,7 @@ td {
     line-height: 1.15;
     text-align: left;
     max-width: 640px;
-    width: 100%;
+    width: 90%;
 }
 
 .footer-legal {
@@ -239,5 +239,5 @@ td {
   white-space: inherit;
   text-align: left;
   max-width: 640px;
-  width: 100%;
+  width: 90%;
 }
