@@ -4,11 +4,13 @@ html, body {
 }
 
 body {
-  margin: 0;
-  background-color: #ffffff; /* Set the background color to white */
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #ffffff; /* Set the background color to white */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -17,7 +19,14 @@ img {
   display: block;
 }
 
-/* removed global table { border-collapse: collapse; } to preserve per-table behavior */
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+}
 
 hr {
   display: block;
