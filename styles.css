@@ -172,14 +172,10 @@ td {
   z-index: 2;
 }
 
-.hero-overlay-image {
-  width: clamp(30px, 20vw, 90px);
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: clamp(20px, 5vw, 60px); /* Responsive gap between image and text */
-  z-index: 3;
+.hero-image-overlay {
+    width: clamp(40px, 20vw, 80px);
+    height: auto;
+    margin-bottom: clamp(20px, 10vw, 50px); /* Responsive gap between image and text */
 }
 
 .hero-overlay-text {
@@ -193,6 +189,7 @@ td {
   padding: 0 clamp(16px, 5vw, 24px);
   z-index: 3;
 }
+
 
 .chat-input-container {
   max-width: 640px;
