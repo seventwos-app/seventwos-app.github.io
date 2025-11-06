@@ -17,14 +17,25 @@
   <main class="container">
     <section class="hero">
       <div class="hero-container">
-        <div class="hero-overlay">
-          <div class="hero-image-overlay">
-            <img src="/images/logo.png" alt="Seventwos Logo" width="320" height="320">
-          </div>
-          <div class="hero-overlay-text">
-            Would factual consumption insights help enhance your business report card ?
-          </div>
-        </div>
+            <div class="hero-overlay">
+                <!-- Info button positioned at top right -->
+                <button id="infoButton" type="button" onclick="toggleInfo()">
+                    <img src="/images/info_btn.png" alt="Info Button" />
+                </button>
+                <div id="infoPanel">
+                    <br>
+                    <p class="info-panel-text" style="margin: 0;">Every year, 90% of startups fail—CB Insights recently showed us the usual assassins: </p>
+                    <br>
+                    <p class="info-panel-text">lack of market need (35%), lack of competitive awareness (20%), and poor pricing (15%).</p>
+                    <br>
+                </div>
+                <div class="hero-image-overlay">
+                    <a href="https://seventwos.org">
+                        <img src="/images/logo.png" alt="Seventwos Logo" width="320" height="320">
+                    </a>
+                </div>
+                <div class="hero-overlay-text">Would factual consumption insights help enhance your business report card ?</div>
+            </div>
       </div>
       <br><br>
       <div class="hero-text text-center">
@@ -69,6 +80,6 @@
         </div>
     </div>
   </footer>
-
+  <script src="/info-button.js"></script>
 </body>
 </html>
