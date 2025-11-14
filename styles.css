@@ -664,7 +664,7 @@ td {
 }
 
 a:link {
-  color: #ffffff; /* default link color */
+  color: #808080; /* default link color */
 }
 a:visited {
   color: #808080; /* grey after click */
