@@ -662,3 +662,16 @@ td {
     transform: rotate(360deg);
   }
 }
+
+a:link {
+  color: #ffffff; /* default link color */
+}
+a:visited {
+  color: #808080; /* grey after click */
+}
+a:hover {
+  color: #808080; /* hover color */
+}
+a:active {
+  color: #808080; /* active click color */
+}
