@@ -235,7 +235,7 @@ td {
 
 .footer-inner {
   width: 100%;
-  max-width: 640px;
+  max-width: 720px;
   padding-inline: clamp(16px, 5vw, 24px);
 }
 
