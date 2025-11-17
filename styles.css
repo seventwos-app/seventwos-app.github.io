@@ -1,9 +1,10 @@
 /* Base layout and resets */
 html, body {
-  height: 100%;
-  margin: 0;
+  height: auto;
+  min-height: 100%;
   padding: 0;
   overflow-x: hidden; /* ✅ Prevent horizontal scrolling */
+  overflow-y: auto;   /* ✅ Ensure viewport controls vertical scroll */
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -41,6 +42,10 @@ hr {
   background-color: #fff;
   padding: 20px clamp(16px, 5vw, 24px);
   box-sizing: border-box;
+}
+
+.container--hero {
+  padding: 20px clamp(16px, 5vw, 24px);
 }
 
 /* Responsive layout toggles */
@@ -144,7 +149,7 @@ td {
 }
 
 .chat-input-container {
-  max-width: 640px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   box-sizing: border-box; /* ✅ Added for proper sizing */
@@ -200,8 +205,8 @@ td {
 
 #submitButton {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 40px;
+  right: 40px;
   width: 50px;
   height: 50px;
   background-color: #ce2d4f;
@@ -467,37 +472,32 @@ td {
 }
 
 .page-upload .upload-body {
-  padding-left: clamp(20px, 5vw, 50px);
-  padding-right: clamp(20px, 5vw, 50px);
-  padding-bottom: clamp(20px, 5vw, 50px);
+  padding: clamp(0px, 1vw, 8px) 0 clamp(8px, 2vw, 16px);
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .upload-input-container {
-  max-width: 640px;
-  margin: 0;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 50px) 0 clamp(16px, 4vw, 24px);
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 4vw, 28px);
-  width: 100%;
-}
-
-.page-upload .upload-message {
-  text-align: justify;
-}
-
-.page-upload .file-list:empty {
-  display: none;
+  gap: clamp(10px, 2vw, 14px); /* 50% reduction */
+  box-sizing: border-box;
+  justify-content: center;
 }
 
 .page-upload .upload-form {
-  max-width: 640px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .upload-dropzone {
   background-color: #262626;
-  border: 1px dashed #bfc3c8;
+  border: none; /* Remove all dotted/dashed borders */
   border-radius: 8px 8px 8px 8px;
   padding: clamp(18px, 4vw, 24px);
   text-align: left;
@@ -505,14 +505,18 @@ td {
   display: flex;
   flex-direction: column;
   gap: clamp(12px, 3vw, 20px);
-  min-height: clamp(200px, 20vh, 260px);
+  /* Reduce dropzone height by ~10% */
+  min-height: clamp(162px, 18vh, 234px);
   box-sizing: border-box;
   width: 100%;
+  max-width: 100%;
   align-items: flex-start;
+  /* Double the previous below space */
+  margin-bottom: clamp(10px, 2vw, 14px);
 }
 
 .upload-dropzone.is-dragover {
-  border-color: #ce2d4f;
+  border: none; /* Keep border removed even on dragover */
   background-color: #262626;
 }
 
@@ -599,7 +603,7 @@ td {
 .upload-form {
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 4vw, 28px);
+  gap: clamp(10px, 2vw, 14px); /* 50% reduction */
   width: 100%;
 }
 
@@ -610,8 +614,8 @@ td {
 
 .upload-submit {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 40px;
+  right: 40px;
   width: 50px;
   height: 50px;
   background-color: #ce2d4f;
