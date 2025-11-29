@@ -1,8 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://seventwos.org/sitemap.xml
-
-# Block unnecessary files
-Disallow: /images/
-Disallow: /*.js$
-Disallow: /*.css$
